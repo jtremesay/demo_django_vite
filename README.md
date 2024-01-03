@@ -29,7 +29,6 @@ DJANGO_DEBUG=true ./manage runserver
 ## Prod
 
 ```shell
-mkdir static && echo "{}" > static/manifest.json
 npm run build
 ./manage.py collectstatic --no-input
 daphne proj.asgi:application -b 0.0.0.0
