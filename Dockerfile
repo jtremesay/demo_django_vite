@@ -28,6 +28,9 @@ COPY demo/ demo/
 RUN mkdir static && echo "{}" > static/manifest.json
 RUN npm run build
 
+# Make django happy (we don't use the db so its ok to generate it at build time)
+RUN python manage.py migrate
+
 # Clean up the image
 RUN rm -rf node_modules front demo/static
 
