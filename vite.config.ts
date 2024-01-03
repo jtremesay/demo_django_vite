@@ -5,7 +5,7 @@ import { globSync } from 'glob'
 export default defineConfig({
     plugins: [
         djangoVitePlugin([
-            "demo/static/demo/ts/sierpinski.ts"
+            "front/sierpinski.ts"
         ])
     ],
 });
